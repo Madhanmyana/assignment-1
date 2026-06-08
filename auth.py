@@ -1,10 +1,11 @@
 from passlib.context import CryptContext
 from jose import jwt,JWTError
 from datetime import datetime,timedelta
+import os
 
 
-SECRET_KEY = "my_secret_key"
-ALGORITHM = "HS256"
+SECRET_KEY = os.getenv("secret_key")
+ALGORITHM = os.getenv("algotithm")
 
 
 pwd_context = CryptContext(schemes=["bcrypt"],deprecated="auto")
@@ -21,7 +22,6 @@ def create_access_token(data:dict):
     token = jwt.encode(payload,SECRET_KEY,algorithm=ALGORITHM)
     return token
 
-from jose import jwt, JWTError
 
 def verify_token(token: str):
     try:
