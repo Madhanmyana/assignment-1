@@ -335,21 +335,6 @@ https://assignment-1-9v19.onrender.com
 
 ---
 
-## What I Learned
-
-* FastAPI Fundamentals
-* SQLAlchemy ORM
-* Dependency Injection
-* JWT Authentication
-* Password Hashing with bcrypt
-* REST API Design
-* React Basics
-* Frontend-Backend Integration
-* Deployment with Render
-* Deployment with Vercel
-* Git and GitHub Workflow
-
----
 
 ## Author
 
