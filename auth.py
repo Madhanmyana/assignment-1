@@ -5,7 +5,7 @@ import os
 
 
 SECRET_KEY = os.getenv("secret_key")
-ALGORITHM = os.getenv("algotithm")
+ALGORITHM = "HS256"
 
 
 pwd_context = CryptContext(schemes=["bcrypt"],deprecated="auto")
