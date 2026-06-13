@@ -19,7 +19,7 @@ def verify_password(plain_password:str,hashed_password:str):
 def create_access_token(data:dict):
     payload = data.copy()
     payload.update({"exp": datetime.utcnow() + timedelta(minutes=30)})
-    token = jwt.encode(payload,SECRET_KEY,algorithms=ALGORITHM)
+    token = jwt.encode(payload,SECRET_KEY,algorithm=ALGORITHM)
     return token
 
 
