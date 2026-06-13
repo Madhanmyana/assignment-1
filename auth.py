@@ -25,7 +25,7 @@ def create_access_token(data:dict):
 
 def verify_token(token: str):
     try:
-        payload = jwt.decode(token,SECRET_KEY,algorithms=[ALGORITHM])
+        payload = jwt.decode(token,SECRET_KEY,algorithm=[ALGORITHM])
         email = payload.get("sub")
 
         if email is None:
