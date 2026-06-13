@@ -19,13 +19,13 @@ def verify_password(plain_password:str,hashed_password:str):
 def create_access_token(data:dict):
     payload = data.copy()
     payload.update({"exp": datetime.utcnow() + timedelta(minutes=30)})
-    token = jwt.encode(payload,SECRET_KEY,algorithm=ALGORITHM)
+    token = jwt.encode(payload,SECRET_KEY,algorithms=ALGORITHM)
     return token
 
 
 def verify_token(token: str):
     try:
-        payload = jwt.decode(token,SECRET_KEY,algorithm=[ALGORITHM])
+        payload = jwt.decode(token,SECRET_KEY,algorithms=[ALGORITHM])
         email = payload.get("sub")
 
         if email is None:
