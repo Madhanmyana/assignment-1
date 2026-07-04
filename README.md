@@ -1,4 +1,4 @@
-# assignment-1
+# notes website
 # Notes App – Full Stack Application
 
 A full-stack Notes Management Application built with **FastAPI**, **MySQL**, **SQLAlchemy**, **JWT Authentication**, **React**, and **Vite**.
